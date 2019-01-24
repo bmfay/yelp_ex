@@ -92,5 +92,13 @@ defmodule YelpEx.Client do
   def search_phone!(options) do
     get!("businesses/search/phone", [], options)
   end
+  
+  def get_business_details(yelp_id, options) do
+    get("businesses/#{yelp_id}", [], options)
+  end
+
+  def get_business_reviews(yelp_id, options) do
+    get("businesses/#{yelp_id}/reviews", [], options)
+  end
 
 end
